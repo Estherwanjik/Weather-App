@@ -1,69 +1,34 @@
-<head><script defer src="main.js"></script></head>Html Webpack Plugin:
-<pre>
-  Error: Child compilation failed:
-  Module not found: Error: Can't resolve '/home/dasar/repos/Wea  ther-App/src/index.html' in '/home/dasar/repos/Weather-App'
-  ModuleNotFoundError: Module not found: Error: Can't resolve '  /home/dasar/repos/Weather-App/src/index.html' in '/home/dasar  /repos/Weather-App'
-      at /home/dasar/repos/Weather-App/node_modules/webpack/lib  /Compilation.js:2237:28
-      at /home/dasar/repos/Weather-App/node_modules/webpack/lib  /NormalModuleFactory.js:949:13
-      at eval (eval at create (/home/dasar/repos/Weather-App/no  de_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>  :10:1)
-      at /home/dasar/repos/Weather-App/node_modules/webpack/lib  /NormalModuleFactory.js:347:22
-      at eval (eval at create (/home/dasar/repos/Weather-App/no  de_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>  :9:1)
-      at /home/dasar/repos/Weather-App/node_modules/webpack/lib  /NormalModuleFactory.js:532:22
-      at /home/dasar/repos/Weather-App/node_modules/webpack/lib  /NormalModuleFactory.js:163:10
-      at /home/dasar/repos/Weather-App/node_modules/webpack/lib  /NormalModuleFactory.js:807:25
-      at /home/dasar/repos/Weather-App/node_modules/webpack/lib  /NormalModuleFactory.js:1032:8
-      at /home/dasar/repos/Weather-App/node_modules/webpack/lib  /NormalModuleFactory.js:1161:5
-  
-  - Compilation.js:2237 
-    [Weather-App]/[webpack]/lib/Compilation.js:2237:28
-  
-  - NormalModuleFactory.js:949 
-    [Weather-App]/[webpack]/lib/NormalModuleFactory.js:949:13
-  
-  
-  - NormalModuleFactory.js:347 
-    [Weather-App]/[webpack]/lib/NormalModuleFactory.js:347:22
-  
-  
-  - NormalModuleFactory.js:532 
-    [Weather-App]/[webpack]/lib/NormalModuleFactory.js:532:22
-  
-  - NormalModuleFactory.js:163 
-    [Weather-App]/[webpack]/lib/NormalModuleFactory.js:163:10
-  
-  - NormalModuleFactory.js:807 
-    [Weather-App]/[webpack]/lib/NormalModuleFactory.js:807:25
-  
-  - NormalModuleFactory.js:1032 
-    [Weather-App]/[webpack]/lib/NormalModuleFactory.js:1032:8
-  
-  - NormalModuleFactory.js:1161 
-    [Weather-App]/[webpack]/lib/NormalModuleFactory.js:1161:5
-  
-  - child-compiler.js:211 
-    [Weather-App]/[html-webpack-plugin]/lib/child-compiler.js:2    11:18
-  
-  - Compiler.js:650 finalCallback
-    [Weather-App]/[webpack]/lib/Compiler.js:650:5
-  
-  - Compiler.js:686 
-    [Weather-App]/[webpack]/lib/Compiler.js:686:11
-  
-  - Compiler.js:1377 
-    [Weather-App]/[webpack]/lib/Compiler.js:1377:17
-  
-  
-  - Hook.js:20 Hook.CALL_ASYNC_DELEGATE [as _callAsync]
-    [Weather-App]/[tapable]/lib/Hook.js:20:14
-  
-  - Compiler.js:1373 
-    [Weather-App]/[webpack]/lib/Compiler.js:1373:33
-  
-  - Compilation.js:3070 finalCallback
-    [Weather-App]/[webpack]/lib/Compilation.js:3070:11
-  
-  - Compilation.js:3413 
-    [Weather-App]/[webpack]/lib/Compilation.js:3413:11
-  
-  
-</pre>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Weather App</title>
+</head>
+<body>
+  <div class="side-bar-container">
+    <div class="header">
+        <h1 class="heading">Weather App</h1>
+
+    </div>
+    <div class="body">
+        <form method="" class="form" data-form>
+            <select id="unit-selection" name="unit-selection" data-unit-select>
+                <option value="metric">Celcius, km</option>
+                <option value="us">Fahrenheit, miles</option>
+            </select>
+            <input type="search" id="location-search" name="location-search" required placeholder="Enter your location..." data-location-input/>
+            <button type="submit" class="search-btn">Search</button>
+        </form>
+        <p class="status-text" id="status-text" data-status-text></p>
+
+    </div>
+
+  </div>
+  <div class="weather-info-container" data-weather-info-container>
+     
+  </div> 
+  <script src="script.js"></script> 
+</body>
+</html>

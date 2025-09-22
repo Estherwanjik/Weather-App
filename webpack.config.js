@@ -9,6 +9,12 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
+  
+  // ... your config
+  stats: {
+    children: true
+  },
+
   devtool: "eval-source-map",
   devServer: {
     watchFiles: ["./src/index.html"],
